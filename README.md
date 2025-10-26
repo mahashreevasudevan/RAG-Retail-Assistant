@@ -12,7 +12,7 @@ An interactive retail analytics assistant that combines retrieval-augmented gene
 ## Methodology:  
 
 1. **Data Connection** – product, purchase, and customer data taken from Snowflake and Neo4j.  
-2. **Data Processing** – Converting product details into embeddings and storing them in a Chroma vector database for semantic search.  
+2. **Data Processing** – Converting product details into embeddings using Hugging Face Sentence-Transformers (all-MiniLM-L6-v2), integrated through LangChain’s HuggingFaceEmbeddings interface and storing them in a Chroma vector database for semantic search.  
 3. **Query Understanding** – Detecting intent (forecast, churn, purchase network, general product query) by using flexible text patterns.  
 4. **Modeling & Analytics** –  
    - Usinh Prophet for sales forecasting with daily, weekly, and yearly seasonality.  
@@ -63,7 +63,7 @@ This project helps retail analysts and managers:
 
 ### Frameworks & Libraries:
 - LangChain
-- Sentence-Transformers (MiniLM-L6-v2)
+- Hugging Face Sentence-Transformers (MiniLM-L6-v2)
 - ChromaDB
 - Prophet
 - Plotly
